@@ -97,7 +97,7 @@ Of these numbers there are
 \item $4$ irreducible fractions with $5$ as denominator (the numerators are $3,6,9,12$).
 \end{itemize}
 
-Therefore $f(x)$ changes values $22$ per interval. Since $100 = 33\cdot 3 + 1$, there are $33\cdot 22$ changes in $[0,99)$. Finally, there are $8$ more changes in $[99,100]$: $99$, $100$, $99\frac12$, $99\frac13$, $99\frac23$, $99\frac14$, $99\frac34$, $99\frac35$.
+Therefore $f(x)$ increases $22$ times per interval. Since $100 = 33\cdot 3 + 1$, there are $33\cdot 22$ changes of value in $[0,99)$. Finally, there are $8$ more changes in $[99,100]$: $99$, $100$, $99\frac12$, $99\frac13$, $99\frac23$, $99\frac14$, $99\frac34$, $99\frac35$.
 
 The total is then $33\cdot 22+8=734$.
 
@@ -116,7 +116,7 @@ Expanding $(x+r)f(x)$, we find that $c_{n+1} = a_n$, $c_k=a_{k-1}+ra_k$ for $k=1
 
 Consider three cases:
 \begin{itemize}
-\item $r=0$. Then $c_0=0$ and $c_k = a_{k-1}$ for $k=1,2,\ldots,n$, and $a=c\implies \frac ac=1<n+1$.
+\item $r=0$. Then $c_0=0$ and $c_k = a_{k-1}$ for $k=1,2,\ldots,n$, and $a=c\implies \frac ac=1\le n+1$.
 \item $|r|\ge 1$. Then
 \begin{gather*}
 |a_0| = \left|\frac{c_0}r\right| \le c,\\
@@ -140,7 +140,7 @@ has an integer as a solution.
 \ans $n=1$.
 
 \sol
-If $n$ is even, $x^2+(2+x)^n+(2-x)^n > 0$, so $n$ is odd.
+If $n$ is even, $x^n+(2+x)^n+(2-x)^n > 0$, so $n$ is odd.
 
 For $n=1$, the equation reduces to $x+(2+x)+(2-x)=0$, which has the unique solution $x=-4$.
 

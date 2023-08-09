@@ -46,7 +46,7 @@
 \prob Let $G$ be the centroid of triangle $ABC$ and $M$ be the midpoint of $BC$. Let $X$ be on $AB$ and $Y$ on $AC$ such that the points $X$, $Y$, and $G$ are collinear and $XY$ and $BC$ are parallel. Suppose that $XC$ and $GB$ intersect at $Q$ and $YB$ and $GC$ intersect at $P$. Show that triangle $MPQ$ is similar to triangle $ABC$.
 
 \soln
-Let $S$ be the midpoint of $AC$; so $BS$ is a median and contains the centroid $G$.
+Let $R$ be the midpoint of $AC$; so $BR$ is a median and contains the centroid $G$.
 
 \begin{center}
 \begin{tikzpicture}
@@ -58,20 +58,20 @@ Let $S$ be the midpoint of $AC$; so $BS$ is a median and contains the centroid $
 \draw[thick] (2.5,1.5) -- (0,0);
 \draw[thick] (4.5,1.5) -- (0,0);
 \draw[thick] (2.5,1.5) -- (6,0);
-\draw[thick,blue] (1.875,1.125) node[anchor=north,black] {$P$} -- (3,0) -- (3.375,1.125) node[anchor=north,black] {$Q$} -- cycle;
-\draw[thick,dashed] (3.75,2.25) node[anchor=west] {$S$} -- (2.5,1.5);
+\draw[thick,blue] (1.875,1.125) node[anchor=north,black] {$Q$} -- (3,0) -- (3.375,1.125) node[anchor=north,black] {$P$} -- cycle;
+\draw[thick,dashed] (3.75,2.25) node[anchor=west] {$R$} -- (2.5,1.5);
 \end{tikzpicture}
 \end{center}
 
 It is well known that $\frac{AG}{AM} = \frac23$; thus the ratio of the similarity between $AXY$ and $ABC$ is $\frac23$. Hence $GX = \frac12XY = \frac 13BC$.
 
 Now look at the similarity between triangles $PBC$ and $PGX$:
-\[\frac{PG}{PB} = \frac{GX}{BC} = \frac13 \implies PB = 3PG \implies PB = \frac34BG = \frac34\cdot\frac23BS = \frac12BS.\]
+\[\frac{QG}{QB} = \frac{GX}{BC} = \frac13 \implies QB = 3QG \implies QB = \frac34BG = \frac34\cdot\frac23BR = \frac12BR.\]
 
-Finally, since $\frac{BM}{BC} = \frac{BP}{BS}$, $MP$ is a midline in $BCS$. Therefore $MP = \frac12CS = \frac14AC$ and $MP\parallel AC$. Similarly, $MQ = \frac14AB$ and $MQ\parallel AB$. This is sufficient to establish that $MPQ$ and $ABC$ are similar (with similarity ratio $\frac14$).
+Finally, since $\frac{BM}{BC} = \frac{BQ}{BS}$, $MQ$ is a midline in $BCR$. Therefore $MQ = \frac12CR = \frac14AC$ and $MQ\parallel AC$. Similarly, $MP = \frac14AB$ and $MP\parallel AB$. This is sufficient to establish that $MPQ$ and $ABC$ are similar (with similarity ratio $\frac14$).
 
 \soln
-Let $R$ and $S$ be the midpoints of $AB$ and $AC$, respectively. Since $G$ is the centroid, it lies in the medians $BS$ and $CR$.
+Let $S$ and $R$ be the midpoints of $AB$ and $AC$, respectively. Since $G$ is the centroid, it lies in the medians $BR$ and $CS$.
 \begin{center}
 \begin{tikzpicture}
 \draw[thick] (0,0) node[anchor=north] {$B$} -- (1.5,4.5) node[anchor=south] {$A$} -- (6,0) node[anchor=north] {$C$} -- cycle;
@@ -82,16 +82,16 @@ Let $R$ and $S$ be the midpoints of $AB$ and $AC$, respectively. Since $G$ is th
 \draw[thick] (2.5,1.5) -- (0,0);
 \draw[thick] (4.5,1.5) -- (0,0);
 \draw[thick] (2.5,1.5) -- (6,0);
-\draw[thick,blue] (1.875,1.125) node[anchor=north,black] {$P$} -- (3,0) -- (3.375,1.125) node[anchor=north,black] {$Q$} -- cycle;
-\draw[thick,dashed] (3.375,1.125) -- (3.75,2.25) node[anchor=west] {$S$} -- (2.5,1.5) -- (0.75,2.25) node[anchor=east] {$R$} -- (1.875,1.125);
+\draw[thick,blue] (1.875,1.125) node[anchor=north,black] {$Q$} -- (3,0) -- (3.375,1.125) node[anchor=north,black] {$P$} -- cycle;
+\draw[thick,dashed] (3.375,1.125) -- (3.75,2.25) node[anchor=west] {$R$} -- (2.5,1.5) -- (0.75,2.25) node[anchor=east] {$S$} -- (1.875,1.125);
 \end{tikzpicture}
 \end{center}
 
-Due to the similarity between triangles $PBC$ and $PGX$ (which is true because $GX\parallel BC$), there is an inverse homothety with center $P$ and ratio $-\frac{XG}{BC} = \frac{XY}{2BC}$ that takes $B$ to $G$ and $C$ to $X$. This homothety takes the midpoint $M$ of $BC$ to the midpoint $K$ of $GX$.
+Due to the similarity between triangles $QBC$ and $QGX$ (which is true because $GX\parallel BC$), there is an inverse homothety with center $Q$ and ratio $-\frac{XG}{BC} = \frac{XY}{2BC}$ that takes $B$ to $G$ and $C$ to $X$. This homothety takes the midpoint $M$ of $BC$ to the midpoint $K$ of $GX$.
 
-Now consider the homothety that takes $B$ to $X$ and $C$ to $G$. This new homothety, with ratio $\frac{XY}{2BC}$, also takes $M$ to $K$. Hence lines $BX$ (which contains side $AB$), $CG$ (which contains the median $CR$), and $MK$ have a common point, which is $R$. Thus $P$ lies on midline $MR$.
+Now consider the homothety that takes $B$ to $X$ and $C$ to $G$. This new homothety, with ratio $\frac{XY}{2BC}$, also takes $M$ to $K$. Hence lines $BX$ (which contains side $AB$), $CG$ (which contains the median $CS$), and $MK$ have a common point, which is $S$. Thus $Q$ lies on midline $MS$.
 
-The same reasoning proves that $Q$ lies on midline $MS$. Since all homothety ratios are the same, $\frac{MP}{MR} = \frac{MQ}{MS}$, which shows that $MPQ$ is similar to $MRS$, which in turn is similar to $ABC$, and we are done.
+The same reasoning proves that $P$ lies on midline $MR$. Since all homothety ratios are the same, $\frac{MQ}{MS} = \frac{MP}{MR}$, which shows that $MPQ$ is similar to $MRS$, which in turn is similar to $ABC$, and we are done.
 
 % Problem 2
 \prob Suppose there are $997$ points given in a plane. If every two points are joined by a line segment with its midpoint coloured in red, show that there are at least $1991$ red points in the plane. Can you find a special case with exactly $1991$ red points?
@@ -225,8 +225,8 @@ Let's work out the details for steps 1 and 3. Steps 2 and 4 are immediate.
 \end{tikzpicture}
 \end{center}
 
-Let's show why this construction works. Let $R_i$ be the radius of circle $\Gamma_i$. Note that $OQ = \frac12 O_1O_2 = \frac{R_1+R_2}2$, $OT = OO_1 - R_1 = \frac{|R_1-R_2|}2$, so
-\[\sin\angle TQO = \frac{OT}{OQ} = \frac{|R_1-R_2|}{R_1+R_2},\]
+Let's show why this construction works. Let $R_i$ be the radius of circle $\Gamma_i$ and suppose without loss of generality that $R_1 \le R_2$. Note that $OQ = \frac12 O_1O_2 = \frac{R_1+R_2}2$, $OT = OO_1 - R_1 = \frac{R_2-R_1}2$, so
+\[\sin\angle TQO = \frac{OT}{OQ} = \frac{R_2-R_1}{R_1+R_2},\]
 which is also the sine of the angle between $O_1O_2$ and the common tangent lines.
 
 Let $t$ be the perpendicular to $OQ$ through $Q$. Then $\angle(t,O_1O_2) = \angle(OQ,QT) = \angle TQO$, and $t$ is parallel to a common tangent line. Since

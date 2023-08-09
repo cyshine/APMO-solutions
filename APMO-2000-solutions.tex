@@ -178,7 +178,7 @@ t^2+u^2 = 97\\
 m^2+n^2 = 37
 \end{matrix}\right.\]
 
-The only solutions the $t^2+u^2=97$ and $m^2+n^2=37$ are $\{t,u\} = \{4,9\}$ and $\{m,n\} = \{1,6\}$, respectively (again, one can check manually.) Then $\{x,y\} = \{3,7\}$, and the solutions are
+The only solutions to $t^2+u^2=97$ and $m^2+n^2=37$ are $\{t,u\} = \{4,9\}$ and $\{m,n\} = \{1,6\}$, respectively (again, one can check manually.) Then $\{x,y\} = \{3,7\}$, and the solutions are
 \begin{center}
 \begin{tikzpicture}
 \draw[thick] (0,0) -- (3,0) -- (1.5,2.6) -- cycle;
@@ -257,7 +257,7 @@ The second solution shows that $N$ can be any point in the bisector of $\angle A
 \sol
 The inequality is equivalent to
 \[\frac{n^n}{n+1} < \binom nk k^k(n-k)^{n-k} < n^n,\]
-which suggests the binomial expansion of
+which suggests investigating the binomial expansion of
 \[n^n = ((n-k)+k)^n = \sum_{i=0}^n \binom ni (n-k)^{n-i}k^i.\]
 
 The $(k+1)$th term $T_{k+1}$ of the expansion is $\binom nk k^k(n-k)^{n-k}$, and all terms in the expansion are positive, which implies the right inequality.
@@ -269,7 +269,7 @@ and
 \[\frac{T_{i+1}}{T_i} > 1 \iff (n-i+1)k > i(n-k)\iff i < k + \frac kn\iff i\le k.\]
 
 This means that
-\[T_0 < T_1 < \cdots < T_{k+1} > T_{k+2} > \cdots > T_{n+1},\]
+\[T_1 < T_2 < \cdots < T_{k+1} > T_{k+2} > \cdots > T_{n+1},\]
 that is, $T_{k+1} = \binom nk k^k(n-k)^{n-k}$ is the largest term in the expansion. The maximum term is greater that the average, which is the sum $n^n$ divided by the quantity $n+1$, therefore
 \[\binom nk k^k(n-k)^{n-k} > \frac{n^n}{n+1},\]
 as required.

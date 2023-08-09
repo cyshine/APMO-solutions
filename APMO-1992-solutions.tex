@@ -63,7 +63,7 @@ Prove that the three lines $OA$, $O_1A_2$, and $O_2A_1$ are concurrent.
 
 \sol
 Because of the tangencies, the following triples of points (two centers and a tangency point) are collinear:
-\[O_1;O_2;A,\quad O;O_1;A_1, \quad O;O_1;A_2.\]
+\[O_1;O_2;A,\quad O;O_1;A_1, \quad O;O_2;A_2.\]
 
 Because of that we can ignore the circles and only draw their centers and tangency points.
 \begin{center}
@@ -140,8 +140,8 @@ Let $a_{h,s}$ the number of regions formed by $h$ horizontal lines and $s$ anoth
 Then $a_{0,0} = 1$ (no lines means there is only one region), and since every one of $s$ lines intersects the other $s-1$ lines, $a_{0,s} = a_{0,s-1} + s$ for $s\ge 0$. Summing yields
 \[a_{0,s} = s + (s-1) + \cdots + 1 + a_{0,0} = \frac{s^2+s+2}2.\]
 
-Each horizontal line only intersects the $s$ lines, so each new horizontal line adds $s+1$ new regions. Therefore
-\[a_{h,s} = \frac{s^2+s+2}2 + h(s+1).\]
+Each horizontal line only intersects the $s$ non-horizontal lines, so $a_{h,s} = a_{h-1,s} + s+1$, which implies
+\[a_{h,s} = a_{0,s} + h(s+1) = \frac{s^2+s+2}2 + h(s+1).\]
 
 Our final task is solving
 \[a_{h,s} = 1992\iff \frac{s^2+s+2}2 + h(s+1) = 1992 \iff (s+1)(s+2h) = 2\cdot 1991 = 2\cdot 11\cdot 181.\]
@@ -152,7 +152,7 @@ The divisors of $2\cdot 1991$ are $1,2,11,22,181,362,1991,3982$. Since $s,h>0$, 
 % Problem 5
 \prob Find a sequence of maximal length consisting of non-zero integers in which the sum of any seven consecutive terms is positive and that of any eleven consecutive terms is negative.
 
-\ans The maximum length is $16$. There are several possible sequences with this length; one such sequence is $(-7,-7,18,-7,-7,-7,-7,18,-7,-7,18,-7,-7,-7,-7,18,-7,-7)$.
+\ans The maximum length is $16$. There are several possible sequences with this length; one such sequence is $(-7,-7,18,-7,-7,-7,18,-7,-7,18,-7,-7,-7,18,-7,-7)$.
 
 \sol
 Suppose it is possible to have more than $16$ terms in the sequence. Let $a_1,a_2,\ldots,a_{17}$ be the first $17$ terms of the sequence. Consider the following array of terms in the sequence:
@@ -170,12 +170,12 @@ a_7& a_8& a_9& a_{10}& a_{11}& a_{12}& a_{13}& a_{14}& a_{15}& a_{16}& a_{17}
 Let $S$ the sum of the numbers in the array. If we sum by rows we obtain negative sums in each row, so $S<0$; however, it we sum by columns we obtain positive sums in each column, so $S>0$, a contradiction. This implies that the sequence cannot have more than $16$ terms.
 
 One idea to find a suitable sequence with $16$ terms is considering cycles of $7$ numbers. For instance, one can try
-\[-a,-a,b,-a,-a,-a,-a,b,-a,-a,b,-a,-a,-a,-a,b,-a,-a\]
+\[-a,-a,b,-a,-a,-a,b, -a,-a,b,-a,-a,-a,b, -a,-a.\]
 
 The sum of every seven consecutive numbers is $-5a+2b$ and the sum of every eleven consecutive numbers is $-8a+3b$, so $-5a+2b > 0$ and $-8a+3b < 0$, that is,
 \[\frac{5a}2 < b < \frac{8a}3\iff 15a < 6b < 16a.\]
 
 Then we can choose, say, $a=7$ and $105 < 6b < 112\iff b = 18$. A valid sequence is then
-\[-7,-7,18,-7,-7,-7,-7,18,-7,-7,18,-7,-7,-7,-7,18,-7,-7.\]
+\[-7,-7,18,-7,-7,-7,18,-7,-7,18,-7,-7,-7,18,-7,-7.\]
 
 \end{document}
