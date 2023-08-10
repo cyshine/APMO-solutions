@@ -167,7 +167,7 @@ Then $D_1D_2D_3$ and $E_1E_2E_3$ are homothetic with center $G$ and ratio $-\fra
 triples $(a,b,c)$ such that $(a,b)$, $(a,c)$, and $(b,c)$ belong to $S$.
 
 \sol
-Call a triple $(a,b,c)$ \emph{good} if and only if $(a,b)$, $(a,c)$, and $(b,c)$ all belong to $S$. For $i$ in $\{1,2,\ldots,n\}$, let $d_i$ be the number of pairs in $S$ that contain $i$, and let $D_i$ be the set of numbers paired with $i$ in $S$ (so $|D_i| = d_i$). Consider a pair $(i,j)\in S$. Our goal is to estimate the number of integers $k$ such that any permutation of $\{i,j,k\}$ is good, that is, $|D_i\cap D_j|$. Note that $i\notin D_i$ and $j\notin D_j$, so $i,j\notin D_i\cap D_j$; thus any $k\in D_i\cap D_j$ is different from both $i$ and $j$, and $\{i,j,k\}$ has three elements as required. Now, since $D_i\cup D_j \in \{1,2,\ldots,n\}$,
+Call a triple $(a,b,c)$ \emph{good} if and only if $(a,b)$, $(a,c)$, and $(b,c)$ all belong to $S$. For $i$ in $\{1,2,\ldots,n\}$, let $d_i$ be the number of pairs in $S$ that contain $i$, and let $D_i$ be the set of numbers paired with $i$ in $S$ (so $|D_i| = d_i$). Consider a pair $(i,j)\in S$. Our goal is to estimate the number of integers $k$ such that any permutation of $\{i,j,k\}$ is good, that is, $|D_i\cap D_j|$. Note that $i\notin D_i$ and $j\notin D_j$, so $i,j\notin D_i\cap D_j$; thus any $k\in D_i\cap D_j$ is different from both $i$ and $j$, and $\{i,j,k\}$ has three elements as required. Now, since $D_i\cup D_j \subseteq \{1,2,\ldots,n\}$,
 \[|D_i\cap D_j| = |D_i| + |D_j| - |D_i\cup D_j| \le d_i + d_j - n.\]
 
 Summing all the results, and having in mind that each good triple is counted three times (one for each two of the three numbers), the number of good triples $T$ is at least
@@ -180,7 +180,7 @@ Finally, the sum $\sum_{i=1}^n d_i$ is $2m$, since $d_i$ counts the number of pa
 \[T \ge \frac13\left(\frac{(2m)^2}n - mn\right) = 4m\frac{(m-\frac{n^2}4)}{3n}.\]
 
 \comment
-This is a celebrated graph theory fact named \emph{Goodman's bound}, after A.~M.~Goodman's method published in 1959. The generalized version of the problem is still studied until today.
+This is a celebrated graph theory fact named \emph{Goodman's bound}, after A.~M.~Goodman's method published in 1959. The generalized version of the problem is still studied to this day.
 
 % Problem 5
 \prob Determine all functions $f$ from the reals to the reals for which
